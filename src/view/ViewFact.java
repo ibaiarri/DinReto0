@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package view;
 
 /**
  *
  * @author ibail
  */
-public interface ViewFact {
-    
+public class ViewFact {
+     public ViewInterface getView(){
+          return null;
+      }
 }

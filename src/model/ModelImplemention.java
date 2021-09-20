@@ -5,51 +5,72 @@
  */
 package model;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
+
 /**
  *
  * @author ibail
  */
-public class ModelImplemention {
-    
-    /*
-	private Connection con;
-	private PreparedStatement stmt;
-	private CallableStatement cStmt;
-	// fichero config.properties
-	private ResourceBundle configFile;
-	private String driverBD;
-	private String urlBD;
-	private String userBD;
-	private String contraBD;
-    
-    
-	public ControladorModelImplemention() {
-		this.configFile = ResourceBundle.getBundle("logic.config");
-		this.driverBD = configFile.getString("driver");
-		this.urlBD = configFile.getString("con");
-		this.userBD = configFile.getString("DBUSER");
-		this.contraBD = configFile.getString("DBPASS");
-	}
+public class ModelImplemention implements ModelInterface {
 
-	private void openConnection() {
-		try {
-			con = DriverManager.getConnection(this.urlBD, this.userBD, this.contraBD);
-		} catch (SQLException e) {
-			// System.out.println("Error al intentar abrir la BD");
-		}
-	}
+    private Connection con;
+    private PreparedStatement stmt;
+    // fichero config.properties
+    private ResourceBundle configFile;
+    private String driverBD;
+    private String urlBD;
+    private String userBD;
+    private String contraBD;
 
-	private void closeConnection() throws SQLException {
-		if (stmt != null) {
-			stmt.close();
-		}
-		if (con != null)
-			con.close();
-	}
-      
-    */  
-        
-        
-        
-        
+    public ModelImplemention() {
+        this.configFile = ResourceBundle.getBundle("logic.config");
+        this.driverBD = configFile.getString("driver");
+        this.urlBD = configFile.getString("con");
+        this.userBD = configFile.getString("DBUSER");
+        this.contraBD = configFile.getString("DBPASS");
+    }
+
+    private void openConnection() {
+        try {
+            con = DriverManager.getConnection(this.urlBD, this.userBD, this.contraBD);
+        } catch (SQLException e) {
+            // System.out.println("Error al intentar abrir la BD");
+        }
+    }
+
+    private void closeConnection() throws SQLException {
+        if (stmt != null) {
+            stmt.close();
+        }
+        if (con != null) {
+            con.close();
+        }
+    }
+
+    @Override
+    public void getGreetings() {
+        File f = new File("Greetings.txt");
+        BufferedReader entrada;
+        try {
+            entrada = new BufferedReader(new FileReader(f));
+            String linea;
+            while (entrada.ready()) {
+                linea = entrada.readLine();
+                System.out.println(linea);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                entrada.close();
+            } catch (IOException e1) {
+            }
+        }
+    }
+
 }
+

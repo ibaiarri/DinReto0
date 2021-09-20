@@ -9,6 +9,9 @@ package model;
  *
  * @author ibail
  */
-public interface ModelFact {
-    
+public class ModelFact {
+      public ModelInterface getModel(){
+          return null;
+      }
+      
 }
