@@ -5,6 +5,10 @@
  */
 package model;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -53,8 +57,8 @@ public class ModelImplemention implements ModelInterface {
 
     @Override
     public void getGreetings() {
-        File f = new File("Greetings.txt");
-        BufferedReader entrada;
+            File f = new File("Greetings.txt");
+        BufferedReader entrada = null;
         try {
             entrada = new BufferedReader(new FileReader(f));
             String linea;

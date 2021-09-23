@@ -25,6 +25,7 @@ public class Application {
          
          Controller control = new Controller();
          control.run(viewFact.getView(), factory.getModel());
+         
           
     }
     
