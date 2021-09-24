@@ -5,12 +5,31 @@
  */
 package view;
 
+import java.util.ResourceBundle;
+
 /**
  *
- * @author ibail
+ * @author ibai Arriola Y Jon mayo
  */
 public class ViewFact {
-     public ViewInterface getView(){
-          return null;
-      }
+    
+    private ResourceBundle fichero;
+    private String opcion;
+    private final String FILE_TYPE="terminal";
+
+    public ViewInterface getView() {
+        ViewInterface view; 
+        this.fichero = ResourceBundle.getBundle("main.ViewModelConfig");
+        this.opcion = fichero.getString("View");
+
+        if (opcion.equalsIgnoreCase(FILE_TYPE)) {
+            view = new ViewtextImplentation();
+
+        } else {
+            view = new ViewSwingImplementation();
+        }
+
+        return view;
+    }
+
 }

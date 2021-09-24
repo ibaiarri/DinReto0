@@ -19,7 +19,7 @@ import java.util.ResourceBundle;
  *
  * @author ibail
  */
-public class ModelImplemention implements ModelInterface {
+public class BDModelImplementation implements ModelInterface {
 
     private Connection con;
     private PreparedStatement stmt;
@@ -30,7 +30,7 @@ public class ModelImplemention implements ModelInterface {
     private String userBD;
     private String contraBD;
 
-    public ModelImplemention() {
+    public BDModelImplementation() {
         this.configFile = ResourceBundle.getBundle("logic.config");
         this.driverBD = configFile.getString("driver");
         this.urlBD = configFile.getString("con");
@@ -56,25 +56,12 @@ public class ModelImplemention implements ModelInterface {
     }
 
     @Override
-    public void getGreetings() {
-            File f = new File("Greetings.txt");
-        BufferedReader entrada = null;
-        try {
-            entrada = new BufferedReader(new FileReader(f));
-            String linea;
-            while (entrada.ready()) {
-                linea = entrada.readLine();
-                System.out.println(linea);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                entrada.close();
-            } catch (IOException e1) {
-            }
-        }
+    public String getGreetings() {
+       return null;
+        
     }
+
+
 
 }
 

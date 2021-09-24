@@ -5,13 +5,29 @@
  */
 package model;
 
+import java.util.ResourceBundle;
+
 /**
  *
  * @author ibail
  */
 public class ModelFact {
-      public ModelInterface getModel(){
-          return null;
+    private ResourceBundle fichero;
+    private String opcion;
+    private final String FILE_TYPE="terminal";
+    public ModelInterface getModel(){     
+        ModelInterface model; 
+        this.fichero = ResourceBundle.getBundle("main.ViewModelConfig");
+        this.opcion = fichero.getString("View");
+
+        if(opcion.equalsIgnoreCase(FILE_TYPE)){
+            model= new FileModelImplementation();
+        }else {
+           model = new BDModelImplementation();
+        }
+
+        return model;
+    }
       }
       
-}
+

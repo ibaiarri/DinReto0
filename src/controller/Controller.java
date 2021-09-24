@@ -15,6 +15,7 @@ import view.ViewInterface;
 public class Controller {
     
     public void run(ViewInterface view,ModelInterface model){
+        view.showGreeting(model.getGreetings());
         
     }
     

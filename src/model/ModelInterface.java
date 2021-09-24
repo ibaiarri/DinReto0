@@ -12,7 +12,7 @@ package model;
 public interface ModelInterface {
     
     
-    public void getGreetings();
+    public String getGreetings();
     
     
 }

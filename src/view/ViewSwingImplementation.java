@@ -9,8 +9,11 @@ package view;
  *
  * @author 2dam
  */
-public interface ViewInterface {
-   
-   
-    public void   showGreeting(String tipo);
+public class ViewSwingImplementation  implements ViewInterface{
+
+    @Override
+    public void showGreeting(String tipo) {
+      
+    }
+    
 }

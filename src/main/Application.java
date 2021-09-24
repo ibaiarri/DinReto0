@@ -6,6 +6,7 @@
 package main;
 
 import controller.Controller;
+import java.util.ResourceBundle;
 import model.ModelFact;
 import view.ViewFact;
 
@@ -18,13 +19,19 @@ public class Application {
     /**
      * @param args the command line arguments
      */
+    
+ 
     public static void main(String[] args) {
-         
+        
          ModelFact factory = new ModelFact() ;
          ViewFact viewFact = new ViewFact() ;
          
          Controller control = new Controller();
          control.run(viewFact.getView(), factory.getModel());
+         
+          
+         
+         
          
           
     }

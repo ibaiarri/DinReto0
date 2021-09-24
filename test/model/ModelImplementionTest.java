@@ -20,7 +20,7 @@ public class ModelImplementionTest {
     public void testGetGreeting() {
         
         //Create object for testing
-       ModelImplemention m = new ModelImplemention();
+       BDModelImplementation m = new BDModelImplementation();
         //Call getGreeting methot  
        m.getGreetings();
         //Assert that greeting is what is supposed to be
