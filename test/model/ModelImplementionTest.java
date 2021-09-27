@@ -12,18 +12,32 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author 2dam
- */
+ * @author Ibai Arriola  Y Jon Mayo */
 public class ModelImplementionTest {
-  
+  /**
+   *  estas 2 pruebas demuestran el correcto funcionamiento de los  metodo getGreetings.
+   * - una ellas obtiene datos de una base de datos
+   * - otra obtiene datos de un ficheros
+   */
     @Test  
-    public void testGetGreeting() {
-        
+    public void testGetGreetingFILE() {  
+        //Create object for testing
+       FileModelImplementation m = new FileModelImplementation();
+        //Call getGreeting methot  
+       m.getGreetings();
+        //Assert that greeting is what is supposed to be
+      assertEquals("Este saludo corre a cuenta del fichero",m.getGreetings());
+    }
+    
+    @Test
+     public void testGetGreetingBD() {  
         //Create object for testing
        BDModelImplementation m = new BDModelImplementation();
         //Call getGreeting methot  
        m.getGreetings();
         //Assert that greeting is what is supposed to be
-        //assertEquals("Los datos del archivo no salen correctamente",,);
+      assertEquals("Este Hola viene de una base de datos",m.getGreetings());
     }
+    
+    
 }

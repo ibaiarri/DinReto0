@@ -14,16 +14,16 @@ import java.util.ResourceBundle;
 public class ModelFact {
     private ResourceBundle fichero;
     private String opcion;
-    private final String FILE_TYPE="terminal";
+    private final String FILE_TYPE="file";
     public ModelInterface getModel(){     
         ModelInterface model; 
         this.fichero = ResourceBundle.getBundle("main.ViewModelConfig");
-        this.opcion = fichero.getString("View");
+        this.opcion = fichero.getString("Model");
 
         if(opcion.equalsIgnoreCase(FILE_TYPE)){
             model= new FileModelImplementation();
         }else {
-           model = new BDModelImplementation();
+            model = new BDModelImplementation();
         }
 
         return model;

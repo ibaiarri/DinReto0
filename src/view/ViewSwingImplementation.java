@@ -5,6 +5,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author 2dam
@@ -13,7 +15,7 @@ public class ViewSwingImplementation  implements ViewInterface{
 
     @Override
     public void showGreeting(String tipo) {
-      
+        JOptionPane.showMessageDialog(null,tipo);
     }
     
 }
