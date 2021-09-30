@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controller;
 
 import model.ModelInterface;
@@ -10,9 +6,15 @@ import view.ViewInterface;
 
 /**
  *
- * @author 2dam
+ * @author ibai arriola  y jon mayo 
+ *
  */
 public class Controller {
+    /**
+     * 
+     * @param view   como vamos a visualizar el metodo get.Greetins
+     * @param model   de donde obtendremos los datos ( base de datos , fichero)
+     */
     
     public void run(ViewInterface view,ModelInterface model){
         view.showGreeting(model.getGreetings());

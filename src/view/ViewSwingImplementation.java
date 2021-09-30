@@ -9,10 +9,13 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author 2dam
+ * @author ibai Arriola , jon  Mayo
  */
 public class ViewSwingImplementation  implements ViewInterface{
-
+/**
+ * 
+ * @param tipo es el parametro que especifca el tipo de view
+ */
     @Override
     public void showGreeting(String tipo) {
         JOptionPane.showMessageDialog(null,tipo);

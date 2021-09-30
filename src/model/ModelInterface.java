@@ -7,11 +7,12 @@ package model;
 
 /**
  *
- * @author 2dam
+ * @author ibai Arriola , jon  Mayo
  */
 public interface ModelInterface {
-    
-    
+      /**
+    * Aqui se pintan los metodos que usaremos futuramente en la implementacion
+    */  
     public String getGreetings();
     
     

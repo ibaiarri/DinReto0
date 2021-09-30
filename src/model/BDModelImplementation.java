@@ -14,10 +14,9 @@ import java.util.ResourceBundle;
 
 /**
  *
- * @author ibail
+ * @author ibai Arriola , jon  Mayo
  */
 public class BDModelImplementation implements ModelInterface {
-
     private Connection con;
     private PreparedStatement stmt;
     private Statement stmt1;
@@ -28,6 +27,7 @@ public class BDModelImplementation implements ModelInterface {
     private String userBD;
     private String contraBD;
     //////sentencia SQL
+    
 
     private final String lectura = "SELECT * FROM saludo";
 

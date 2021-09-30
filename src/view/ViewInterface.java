@@ -7,10 +7,12 @@ package view;
 
 /**
  *
- * @author 2dam
+ * @author ibai Arriola , jon  Mayo
  */
 public interface ViewInterface {
-   
+   /**
+    * Aqui se pintan los metodos que usaremos futuramente en la implementacion
+    */
    
     public void   showGreeting(String tipo);
 }

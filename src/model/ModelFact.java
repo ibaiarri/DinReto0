@@ -6,10 +6,9 @@
 package model;
 
 import java.util.ResourceBundle;
-
 /**
  *
- * @author ibail
+ * @author ibai Arriola , jon  Mayo
  */
 public class ModelFact {
     private ResourceBundle fichero;

@@ -12,7 +12,7 @@ import view.ViewFact;
 
 /**
  *
- * @author ibai Arriola Landa, jon  Mayo Diez
+ * @author ibai Arriola , jon  Mayo
  */
 public class Application {
 

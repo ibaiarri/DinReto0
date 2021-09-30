@@ -7,10 +7,13 @@ package view;
 
 /**
  *
- * @author 2dam
+ * @author ibai Arriola , jon  Mayo
  */
 public class ViewtextImplentation implements ViewInterface{
-
+    /**
+     * 
+     * @param saludo es el mensaje que se va a mostrar
+     */
     @Override
     public void showGreeting(String saludo) {
         System.out.println(saludo);
